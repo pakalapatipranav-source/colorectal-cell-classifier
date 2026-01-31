@@ -6,6 +6,8 @@ scikit-learn
 scikit-image
 Pillow
 requests
-tensorflow
+# Pin TF 2.15 + protobuf<4 so Streamlit works on Cloud (TF 2.20+ requires protobuf 5+, which breaks Streamlit)
+tensorflow>=2.15,<2.16
 tensorflow-datasets
-streamlit
+streamlit>=1.40.0
+protobuf>=3.20.0,<4
